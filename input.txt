@@ -1,0 +1,133 @@
+
+
+%percent sign for comment	
+
+refinementfactor=7 | long
+
+denyinitiation=0 | long
+denypropagation=0 | long
+
+t_halflife=0.1 | float
+
+%debugprint1=0 | long
+%debugprint2=0 | long
+%debugprint3=0 | long
+%debugprint4=0 | long
+%debugprint5=0 | long %for steelstrength and pauses
+%debugprint6=0 | long %for propagation of 210 in general, with pauses
+%debugprint7=0 | long %for every particle placement
+%debugprint8=0 | long %for every box evaluation
+%debugprint9=0 | long %for elasticstrength load pause
+
+matmodelnum=4 | long %mostly for debugging purpose
+%matmodelnum=1: wood material model
+%matmodelnum=4: crackable elastic material
+
+E=8000 | float
+nu=0.3 | float
+
+b_1=0 | float
+b_2=0 | float
+
+NN_base_1=6 | long
+NN_base_2=5 | long
+
+le_base=100 | float
+
+%putting it out of bounds to deactivate, or just comment them out
+%NodexPosition_PredXvel=-300 | float
+%NodeyPosition_PredYvel=-300 | float
+
+%or if one fancy relative position instead, relative to le_base. activation of this overrides the absolute input
+%NodexPosition_PredXvel_rel=3 | float
+NodeyPosition_PredYvel_rel=3 | float
+
+endcostime              = 0.1	|	float
+endcosramp              = 1	|	float
+%dispload                = 2.5	|	float
+dispload_rel				= 0.025 | float %relative to le_base
+ftime                   = 1	|	float
+t0_plane=1	|	float
+%t0_plane_pause=0 |long
+
+videofps=100 | long
+timescale=1 | long
+
+
+%NodeyPosition_pin=-100|float %to deactivate, put it out of bound
+%NodexPosition_pin=-100|float %to deactivate, put it out of bound
+
+%NodexPosition_roller=-100|float %to deactivate, put it out of bound
+%NodeyPosition_roller=-100|float %to deactivate, put it out of bound
+
+
+%NodexPosition_pin_rel=1|float %relative to le_base
+%NodeyPosition_pin_rel=-1|float %relative to le_base
+
+%NodexPosition_roller_rel=1|float %relative to le_base
+NodeyPosition_roller_rel=1|float %relative to le_base
+
+
+x_start=100|float
+x_end=300|float
+
+y_start=100|float
+y_end=300|float
+
+
+xdirletter_all=r|string
+ydirletter_all=t|string
+zdirletter_all=l|string
+xydirletter_all=rt|string
+yzdirletter_all=tl|string
+xzdirletter_all=rl|string
+
+%n_eraseboxes=1|float
+
+%x_erase_start(1)=250|float
+%x_erase_end(1)=300|float
+%y_erase_start(1)=187.5|float
+%y_erase_end(1)=212.5|float
+
+%x_erase_start(2)=150|float
+%x_erase_end(2)=250|float
+%y_erase_start(2)=250|float
+%y_erase_end(2)=300|float
+
+n_uncrackableboxes=2|float
+
+x_uncrackable_start(1)=100|float
+x_uncrackable_end(1)=300|float
+y_uncrackable_start(1)=100|float
+y_uncrackable_end(1)=150|float
+
+x_uncrackable_start(2)=100|float
+x_uncrackable_end(2)=300|float
+y_uncrackable_start(2)=250|float
+y_uncrackable_end(2)=300|float
+
+
+
+%crackinitdebug=0|long
+n_crackpaths=1|long
+n_crackparticles(1)=2|long
+x_crackparticle(1,1,1)=250 %icrackparticle,idimension,icrackpath
+x_crackparticle(1,2,1)=200
+x_crackparticle(2,1,1)=350
+x_crackparticle(2,2,1)=200
+tip_terminate(1,1)=1|long
+cohesivepath(1)=1|long
+deltae=0.02 |float
+deltai=0.018 |float
+cohesivepeakfactor=1|long
+
+elasticstrength=25
+
+%x_start_rel=1|float
+%x_end_rel=4|float
+
+%y_start_rel=1|float
+%y_end_rel=3|float
+
+
+
